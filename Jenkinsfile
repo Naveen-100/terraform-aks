@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('pull the code') {
             steps {
-               git branch: 'main', url: 'https://github.com/Naveen-100/terraform-aks.git'
+                git credentialsId: 'jnks-pvt', url: 'git@github.com:Naveen-100/terraform-aks.git'
             }
         }
         stage('Terraform version check') {
